@@ -72,6 +72,17 @@ body {
   box-shadow: none;
 }
 
+.btn.small {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* 가로 방향 중앙 */
+  justify-content: center; /* 세로 방향 중앙 */
+  text-align: center;    /* 텍스트 자체 가운데 */
+  line-height: 1.2;      /* 줄간격 정리 */
+  font-size: 12px;
+  padding: 6px 10px;     /* 버튼 높이 조절 */
+}
+
 .btn.wide {
   width: 100%;
 }
