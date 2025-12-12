@@ -60,78 +60,68 @@
         </div>
       </section>
 
-      <!-- 판매 제품 소개 (캐러셀) -->
-      <section class="section-block">
-        <h2 class="section-title">판매 제품 소개</h2>
-        <p class="section-subtitle">
-          인기 상품을 좌우로 넘기며 살펴보세요.<br>카드 클릭 시 네이버 블로그로 이동합니다.
-        </p>
-
-        <div class="carousel">
-          <button class="carousel-arrow prev" aria-label="이전 상품">&lt;</button>
-
-          <div class="carousel-window">
-            <!-- 각 상품 카드는 링크 전체를 클릭 가능하게 -->
-            <a href="https://blog.naver.com/yc20508/224099159989"
-               target="_blank"
-               class="product-card active"
-               data-index="0">
-              <div class="product-thumbnail"
-                   style="background-image: url('연말행사이벤트.png');">
-              </div>
-              <div class="product-info">
-                <h3 class="product-title">[굿바이 2025]<br>연말 행사 이벤트</h3>
-              </div>
-            </a>
-
-            <a href="https://blog.naver.com/yc20508/224086303332"
-               target="_blank"
-               class="product-card"
-               data-index="1">
-              <div class="product-thumbnail"
-                   style="background-image: url('점프4.png');">
-              </div>
-              <div class="product-info">
-                <h3 class="product-title">[점프4 0원!!]<br>키즈&실버 전용폰,<br>무료로 개통하자!</h3>
-              </div>
-            </a>
-
-            <a href="https://blog.naver.com/yc20508/224081145498"
-               target="_blank"
-               class="product-card"
-               data-index="2">
-              <div class="product-thumbnail"
-                   style="background-image: url('맘편안폰.png');">
-              </div>
-              <div class="product-info">
-                <h3 class="product-title">[맘편안폰S]<br>어르신을 위한 No.1 휴대폰<br>핵심기능 총정리! </h3>
-              </div>
-            </a>
-            
-            <a href="https://blog.naver.com/yc20508/224079732122"
-               target="_blank"
-               class="product-card"
-               data-index="3">
-              <div class="product-thumbnail"
-                   style="background-image: url('유성.png');">
-              </div>
-              <div class="product-info">
-                <h3 class="product-title">[매장홍보]<br>왜 KT플라자 유성점을<br>선택하셔야 할까요?</h3>
-              </div>
-            </a>
+    <!-- 판매 제품 소개 (세로 리스트) -->
+    <section class="section-block">
+      <h2 class="section-title">판매 제품 소개</h2>
+      <p class="section-subtitle">
+        인기 상품을 한눈에 살펴보세요.<br>카드 클릭 시 네이버 블로그로 이동합니다.
+      </p>
+    
+      <div class="product-list">
+        <!-- 카드 1 -->
+        <a href="https://blog.naver.com/yc20508/224099159989"
+           target="_blank"
+           class="product-card">
+          <div class="product-thumbnail"
+               style="background-image: url('연말행사이벤트.png');">
           </div>
-
-          <button class="carousel-arrow next" aria-label="다음 상품">&gt;</button>
-        </div>
-
-        <div class="carousel-dots" aria-label="상품 선택">
-          <button class="dot active" data-index="0"></button>
-          <button class="dot" data-index="1"></button>
-          <button class="dot" data-index="2"></button>
-          <button class="dot" data-index="3"></button>
-        </div>
-      </section>
+          <div class="product-info">
+            <p class="product-head">이 달의 메인 이벤트</p>
+            <h3 class="product-title">[굿바이 2025]<br>연말 행사 이벤트</h3>
+          </div>
+        </a>
+    
+        <!-- 카드 2 -->
+        <a href="https://blog.naver.com/yc20508/224086303332"
+           target="_blank"
+           class="product-card">
+          <div class="product-thumbnail"
+               style="background-image: url('점프4.png');">
+          </div>
+          <div class="product-info">
+            <p class="product-head">키즈 & 실버 전용폰</p>
+            <h3 class="product-title">[점프4 0원!!]<br>키즈&실버 전용폰,<br>무료로 개통하자!</h3>
+          </div>
+        </a>
+    
+        <!-- 카드 3 -->
+        <a href="https://blog.naver.com/yc20508/224081145498"
+           target="_blank"
+           class="product-card">
+          <div class="product-thumbnail"
+               style="background-image: url('맘편안폰.png');">
+          </div>
+          <div class="product-info">
+            <p class="product-head">어르신 추천 휴대폰</p>
+            <h3 class="product-title">[맘편안폰S]<br>어르신을 위한 No.1 휴대폰<br>핵심기능 총정리!</h3>
+          </div>
+        </a>
+    
+        <!-- 카드 4 -->
+        <a href="https://blog.naver.com/yc20508/224079732122"
+           target="_blank"
+           class="product-card">
+          <div class="product-thumbnail"
+               style="background-image: url('유성.png');">
+          </div>
+          <div class="product-info">
+            <p class="product-head">매장 소개</p>
+            <h3 class="product-title">[매장홍보]<br>왜 KT플라자 유성점을<br>선택하셔야 할까요?</h3>
+          </div>
+        </a>
+      </div>
     </section>
+
 
     <!-- Tap 2. 상담사 소개 -->
     <section id="tab-staff" class="tab-content" aria-label="상담사 소개">
