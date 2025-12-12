@@ -5,6 +5,14 @@
   <title>KT플라자 유성직영점</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <!-- PWA manifest & icons -->
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/kt-icon-192.png">
+  <link rel="apple-touch-icon" href="icons/kt-icon-192.png">
+  <meta name="theme-color" content="#25a25a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="KT플라자 유성점">
 </head>
 <body>
   <!-- 상단 고정바 -->
@@ -335,5 +343,21 @@
   </main>
 
   <script src="script.js"></script>
+
+  <!-- Service Worker registration for PWA -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(function(reg) {
+            console.log('ServiceWorker registered:', reg.scope);
+          })
+          .catch(function(error) {
+            console.log('ServiceWorker registration failed:', error);
+          });
+      });
+    }
+  </script>
+
 </body>
 </html>
