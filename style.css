@@ -228,23 +228,25 @@ body {
   border: none;
 }
 
-/* 캐러셀 */
-.carousel {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+/* 제품소개 영역역 */
+
+.product-head {
+  margin: 0 0 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #2b7a4b;  /* 연두 느낌의 포인트 컬러 */
 }
 
-.carousel-window {
-  flex: 1;
-  min-height: 120px;
-  position: relative;
+.product-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* 카드 사이 간격 */
 }
 
 .product-card {
-  position: absolute;
-  inset: 0;
-  display: none;
+  position: relative;          /* absolute 제거 */
+  inset: auto;                 /* 혹시 남아있다면 무효화 */
+  display: flex;               /* 항상 보이게 */
   flex-direction: row;
   gap: 10px;
   padding: 10px;
@@ -290,48 +292,6 @@ body {
   color: #1b4b2b;
 }
 
-/* 캐러셀 화살표 */
-.carousel-arrow {
-  width: 30px;
-  height: 30px;
-  border-radius: 999px;
-  border: none;
-  background: #e1f3e1;
-  color: #174a28;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  font-size: 16px;
-  padding: 0;
-}
-
-.carousel-arrow:active {
-  transform: scale(0.95);
-}
-
-/* 캐러셀 점 */
-.carousel-dots {
-  margin-top: 10px;
-  display: flex;
-  justify-content: center;
-  gap: 6px;
-}
-
-.dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 999px;
-  border: none;
-  background: #c7e3c7;
-  padding: 0;
-  cursor: pointer;
-}
-
-.dot.active {
-  width: 18px;
-  background: #25a25a;
-}
 
 /* 상담사 카드 */
 
