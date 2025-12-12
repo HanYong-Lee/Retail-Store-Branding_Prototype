@@ -52,15 +52,16 @@ body {
 }
 
 .call-btn {
-  display: flex;
-  flex-direction: row;
+  display: flex !important;
+  flex-direction: row !important;
   align-items: center;
+  justify-content: center;
+  gap: 6px;
   text-align: left;
-  gap: 6px; /* 아이콘과 텍스트 간격 */
 }
 
 .call-btn .icon {
-  font-size: 18px; /* 아이콘 크기 */
+  font-size: 18px;
   line-height: 1;
   display: flex;
   align-items: center;
