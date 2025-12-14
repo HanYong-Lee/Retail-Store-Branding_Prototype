@@ -361,7 +361,7 @@ body {
 .large-card {
   display: flex;
   align-items: center;
-  width: 94%;
+  width: 100%;
   padding: 14px;
   margin: 0 auto 12px;
   background: #f7fff9;
