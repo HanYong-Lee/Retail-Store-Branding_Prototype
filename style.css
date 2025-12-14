@@ -1,17 +1,21 @@
-/* ============ 공통: 컬러 토큰 ============ */
+/* ============ 공통 컬러 토큰: Red Soft Theme ============ */
 :root {
-  --color-bg-top: #f4fff4;
+  --color-bg-top: #ffeef1;
   --color-bg-middle: #ffffff;
-  --color-bg-bottom: #f0fff8;
+  --color-bg-bottom: #fff6f7;
 
-  --color-text-main: #123326;
-  --color-text-soft: #4b7057;
-  --color-accent: #25a25a;
-  --color-accent-dark: #1f8a4c;
+  --color-text-main: #4a1f1f;
+  --color-text-soft: #7a4b4b;
 
-  --color-card-bg: rgba(255, 255, 255, 0.9);
-  --color-card-border: rgba(196, 233, 196, 0.7);
-  --color-card-shadow: 0 6px 14px rgba(33, 96, 56, 0.08);
+  --color-accent: #ff5b72;          /* 메인 포인트 레드핑크 */
+  --color-accent-dark: #e7435c;     /* hover 색 */
+
+  --color-card-bg: rgba(255, 255, 255, 0.95);
+  --color-card-border: rgba(255, 180, 190, 0.55);
+
+  /* 그림자를 좀 더 강하게 */
+  --shadow-soft: 0 6px 18px rgba(255, 96, 120, 0.18);
+  --shadow-strong: 0 10px 24px rgba(255, 96, 120, 0.25);
 
   --radius-card: 18px;
   --radius-pill: 999px;
@@ -19,12 +23,6 @@
 }
 
 /* ============ 기본 설정 ============ */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -49,145 +47,74 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(
-      120deg,
-      rgba(220, 245, 225, 0.98),
-      rgba(233, 249, 233, 0.96)
-    );
+  background: rgba(255, 235, 238, 0.9);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid #c4e9c4;
-  box-shadow: 0 4px 12px rgba(25, 83, 46, 0.08);
+  border-bottom: 1px solid rgba(255, 150, 165, 0.3);
+  box-shadow: var(--shadow-soft);
   z-index: 1000;
-}
-
-.top-bar-left {
-  line-height: 1.15;
 }
 
 .shop-name-line1 {
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.06em;
-  color: #1b703e;
-  text-transform: uppercase;
+  color: #d84055;
 }
 
 .shop-name-line2 {
   font-size: 17px;
   font-weight: 800;
-  color: #0c4b2a;
+  color: #b42c3f;
 }
 
-/* 상단 오른쪽 버튼(점장 연락) */
-.top-bar-right .small {
-  font-size: 12px;
-  padding: 6px 12px;
-}
-
-/* 전화 아이콘 + 텍스트 버튼 */
-.call-btn {
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  text-align: left;
-}
-
-.call-btn .icon {
-  font-size: 18px;
-  line-height: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.call-btn .text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.1;
-}
-
-/* ============ 버튼 공통 스타일 ============ */
+/* ============ 버튼 ============ */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 10px 16px;
   border-radius: var(--radius-pill);
-  border: none;
   font-weight: 600;
   font-size: 14px;
-  text-decoration: none;
   cursor: pointer;
-  transition:
-    transform var(--transition-fast),
-    box-shadow var(--transition-fast),
-    background var(--transition-fast),
-    color var(--transition-fast);
-  white-space: nowrap;
+  border: none;
+  transition: 0.15s ease;
+  text-decoration: none;
 }
 
 .btn:hover {
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
 }
 
-.btn:active {
-  transform: scale(0.97);
-  box-shadow: none;
-}
-
-.btn.small {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  line-height: 1.2;
-  font-size: 12px;
-  padding: 6px 10px;
-}
-
-.btn.wide {
-  width: 100%;
-}
-
-/* 버튼 색상 */
+/* 메인 레드 버튼 */
 .primary-btn {
-  background: linear-gradient(135deg, #25a25a, #2fbd6b);
-  color: #ffffff;
-  box-shadow: 0 4px 12px rgba(37, 162, 90, 0.25);
+  background: linear-gradient(135deg, #ff5b72, #ff7790);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(255, 96, 120, 0.3);
 }
-
 .primary-btn:hover {
-  background: linear-gradient(135deg, #1f8a4c, #29a85f);
+  background: linear-gradient(135deg, #e7435c, #ff5b72);
 }
 
+/* 보조 버튼 */
 .secondary-btn {
-  background: linear-gradient(135deg, #e6f7f2, #f3fffb);
-  color: #116655;
-  border: 1px solid #b8e1d6;
+  background: #ffecef;
+  color: #a63f4a;
+  border: 1px solid #ffc7d1;
 }
-
 .secondary-btn:hover {
-  background: linear-gradient(135deg, #ddf3ec, #f0fffa);
+  background: #ffe2e6;
 }
 
+/* 포인트 버튼 */
 .accent-btn {
-  background: linear-gradient(135deg, #f7ffe0, #fdffe9);
-  color: #757f00;
-  border: 1px solid #e3f0a3;
+  background: #fff6e0;
+  color: #805500;
+  border: 1px solid #ffdf9f;
 }
-
 .accent-btn:hover {
-  background: linear-gradient(135deg, #f2ffd1, #fbffe2);
-}
-
-/* ============ 메인 레이아웃 ============ */
-.page-container {
-  padding: 80px 16px 24px;
-  max-width: 720px;
-  margin: 0 auto;
+  background: #ffeecc;
 }
 
 /* ============ 탭 네비게이션 ============ */
@@ -195,217 +122,123 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 6px;
-  padding: 4px;
-  background: rgba(233, 249, 233, 0.98);
+  padding: 6px;
+  background: #ffeaf0;
   border-radius: var(--radius-pill);
-  border: 1px solid #cceacd;
+  border: 1px solid #ffc6d1;
   margin-bottom: 18px;
-  box-shadow: 0 4px 12px rgba(27, 86, 46, 0.05);
+  box-shadow: var(--shadow-soft);
 }
 
 .tab-btn {
-  border-radius: var(--radius-pill);
-  border: none;
   padding: 8px 6px;
+  border-radius: var(--radius-pill);
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 700;
+  color: #b23a4a;
   background: transparent;
-  color: #336644;
+  border: none;
   cursor: pointer;
-  transition:
-    background var(--transition-fast),
-    color var(--transition-fast),
-    box-shadow var(--transition-fast),
-    transform var(--transition-fast);
-}
-
-.tab-btn:hover {
-  background: rgba(214, 240, 214, 0.8);
+  transition: var(--transition-fast);
 }
 
 .tab-btn.active {
-  background: linear-gradient(135deg, #25a25a, #2fbd6b);
-  color: #ffffff;
-  box-shadow: 0 3px 10px rgba(37, 162, 90, 0.3);
-  transform: translateY(-1px);
+  background: linear-gradient(135deg, #ff5b72, #ff7790);
+  color: #fff;
+  box-shadow: var(--shadow-strong);
+  transform: translateY(-2px);
 }
 
-/* ============ 탭 콘텐츠 ============ */
-.tab-content {
-  display: none;
-}
-
-.tab-content.active {
-  display: block;
-}
-
-/* ============ 섹션 공통 ============ */
+/* ============ 섹션 공통 스타일 ============ */
 .section-block {
   margin-bottom: 24px;
-  padding: 16px 16px 20px;
+  padding: 18px 16px;
   background: var(--color-card-bg);
   border-radius: var(--radius-card);
-  box-shadow: var(--color-card-shadow);
   border: 1px solid var(--color-card-border);
+  box-shadow: var(--shadow-soft);
   backdrop-filter: blur(6px);
+  transition: var(--transition-fast);
+}
+
+/* Hover하면 더 떠 보이게 */
+.section-block:hover {
+  box-shadow: var(--shadow-strong);
+  transform: translateY(-2px);
 }
 
 .section-title {
-  margin: 0 0 6px;
+  margin-bottom: 6px;
   font-size: 16px;
-  font-weight: 750;
-  color: #184a2b;
+  font-weight: 800;
+  color: #b12a41;
 }
 
 .section-subtitle {
-  margin: 0 0 12px;
   font-size: 13px;
   color: var(--color-text-soft);
 }
 
-/* ============ 단체사진 영역 ============ */
-.group-photo-wrapper {
-  width: 100%;
-  margin-top: 10px;
-  display: flex;
-  justify-content: center;
-}
-
+/* ============ 단체사진 디자인 ============ */
 .group-photo {
   width: 100%;
   max-width: 360px;
   border-radius: 16px;
-  border: 1px solid #d6edd6;
-  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.12);
-  object-fit: cover;
+  border: 1px solid #ffd3dc;
+  box-shadow: var(--shadow-soft);
 }
 
-/* ============ 영상 영역 ============ */
-.video-wrapper {
-  position: relative;
-  width: 100%;
-  padding-top: 56.25%; /* 16:9 */
-  border-radius: 16px;
-  overflow: hidden;
-  background: #dff5e0;
-  box-shadow: 0 5px 12px rgba(33, 96, 56, 0.12);
-}
-
-.video-wrapper iframe {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-/* ============ 제품소개(세로 리스트) ============ */
-.product-head {
-  margin: 0 0 4px;
-  font-size: 12px;
-  font-weight: 600;
-  color: #2b7a4b;
-}
-
-.product-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
+/* ============ 제품 카드 ============ */
 .product-card {
-  position: relative;
-  inset: auto;
   display: flex;
   flex-direction: row;
-  gap: 10px;
-  padding: 10px 12px;
-  background: #f7fff7;
+  gap: 12px;
+  padding: 12px;
+  background: #fff7f9;
   border-radius: 16px;
-  border: 1px solid #d6edd6;
+  border: 1px solid #ffd3db;
   text-decoration: none;
   color: inherit;
-  transition:
-    box-shadow var(--transition-fast),
-    transform var(--transition-fast),
-    background var(--transition-fast);
+  box-shadow: var(--shadow-soft);
+  transition: var(--transition-fast);
 }
 
 .product-card:hover {
-  background: #f2fff5;
-  box-shadow: 0 4px 10px rgba(40, 115, 67, 0.12);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-strong);
+  background: #fff1f4;
 }
 
 .product-thumbnail {
-  width: 80px;
-  height: 80px;
+  width: 82px;
+  height: 82px;
   border-radius: 14px;
   background-size: cover;
   background-position: center;
-  flex-shrink: 0;
-}
-
-/* 썸네일 대체(이미지 없을 때) */
-.placeholder-thumb {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 11px;
-  color: #4c7a4d;
-  background: linear-gradient(135deg, #c8f2c8, #e6ffe6);
-}
-
-.product-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .product-title {
   font-size: 14px;
-  margin: 0 0 4px;
-  color: #1b4b2b;
+  font-weight: 700;
+  color: #a52741;
 }
 
 /* ============ 상담사 카드 ============ */
 .staff-card {
   display: flex;
-  gap: 10px;
-  padding: 10px 12px;
+  gap: 12px;
+  padding: 12px;
   border-radius: 16px;
-  background: #f7fff9;
-  border: 1px solid #d8f0d8;
-  text-decoration: none;
-  color: inherit;
-  transition:
-    box-shadow var(--transition-fast),
-    transform var(--transition-fast),
-    background var(--transition-fast);
+  background: #fff7f9;
+  border: 1px solid #ffd3db;
+  box-shadow: var(--shadow-soft);
+  transition: var(--transition-fast);
 }
 
 .staff-card:hover {
-  background: #f0fff7;
-  box-shadow: 0 4px 10px rgba(38, 110, 60, 0.12);
-  transform: translateY(-1px);
-}
-
-.large-card {
-  display: flex;
-  align-items: center;
-  width: 82%;
-  padding: 14px;
-  margin: 0 auto 12px;
-  background: #f7fff9;
-  border: 1px solid #d8f0d8;
-  border-radius: 18px;
-  text-decoration: none;
-  color: inherit;
-  gap: 12px;
-}
-
-.staff-avatar {
-  flex-shrink: 0;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-strong);
+  background: #fff1f4;
 }
 
 .profile-photo {
@@ -413,112 +246,39 @@ body {
   height: 64px;
   border-radius: 50%;
   object-fit: cover;
-}
-
-.avatar-circle {
-  width: 64px;
-  height: 64px;
-  border-radius: 999px;
-  background: radial-gradient(circle at 30% 20%, #ffffff, #a8e6a8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  color: #14542f;
-}
-
-.staff-info {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.staff-name {
-  margin: 0;
-  font-size: 15px;
-  font-weight: 700;
-  color: #163b23;
-}
-
-.staff-role {
-  margin: 0;
-  font-size: 13px;
-  color: #4f7258;
-}
-
-.staff-desc {
-  margin: 2px 0 0;
-  font-size: 12px;
-  color: #486553;
-}
-
-.staff-link-text {
-  margin-top: 4px;
-  font-size: 11px;
-  color: #1f8a4c;
+  border: 2px solid #ffc2cf;
 }
 
 /* ============ 네이버 예약 카드 ============ */
-.reserve-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
-}
-
 .reserve-card {
-  padding: 10px 10px 11px;
+  padding: 12px;
   border-radius: 16px;
-  background: #f5fff6;
-  border: 1px solid #d1eed1;
-  text-decoration: none;
-  color: inherit;
-  transition:
-    box-shadow var(--transition-fast),
-    transform var(--transition-fast),
-    background var(--transition-fast);
+  background: #fff7f9;
+  border: 1px solid #ffd7df;
+  box-shadow: var(--shadow-soft);
+  transition: var(--transition-fast);
 }
 
 .reserve-card:hover {
-  background: #f0fff3;
-  box-shadow: 0 4px 10px rgba(33, 96, 56, 0.12);
-  transform: translateY(-1px);
+  background: #fff1f4;
+  box-shadow: var(--shadow-strong);
+  transform: translateY(-2px);
 }
 
 .reserve-name {
-  margin: 0 0 2px;
   font-size: 13px;
   font-weight: 700;
-  color: #184827;
+  color: #b12a41;
 }
 
 .reserve-desc {
-  margin: 0 0 4px;
   font-size: 11px;
-  color: #55745d;
-}
-
-.reserve-link {
-  font-size: 11px;
-  color: #1f8a4c;
+  color: #7a4b4b;
 }
 
 /* ============ 반응형 보정 ============ */
 @media (max-width: 420px) {
   .reserve-grid {
     grid-template-columns: 1fr 1fr;
-  }
-
-  .page-container {
-    padding-inline: 12px;
-  }
-
-  .large-card {
-    width: 100%;
-  }
-}
-
-@media (min-width: 721px) {
-  .page-container {
-    padding-top: 92px;
   }
 }
